@@ -1,14 +1,23 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
+
+
 export default function NavBar() {
+  const estilo = {
+    width: '100%'
+
+};
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
+    <nav className="navbar navbar-expand-lg py-3 bg-primary" >
+      <div className="container bg-white py-3 rounded">
+        <a>
+          
+        </a>
         <Link
           to="/"
           tabIndex={0}
-          className="navbar-brand"
+          className="navbar-brand btn btn-outline-light"
           aria-label="Ir a Inicio"
         >
           PELICULAS
@@ -25,20 +34,20 @@ export default function NavBar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav">
-            <NavLink to="/generos" tabIndex={1} className="nav-link">
+          <div className="navbar-nav d-flex justify-content-around" style={estilo}>
+            <NavLink to="/generos" tabIndex={1} className="nav-link btn btn-outline-secondary">
               Géneros
             </NavLink>
-            <NavLink to="/directores" tabIndex={2} className="nav-link">
+            <NavLink to="/directores" tabIndex={2} className="nav-link btn btn-outline-secondary">
               Directores
             </NavLink>
-            <NavLink to="/productoras" tabIndex={3} className="nav-link">
+            <NavLink to="/productoras" tabIndex={3} className="nav-link btn btn-outline-secondary">
               Productoras
             </NavLink>
-            <NavLink to="/tipos" tabIndex={4} className="nav-link">
+            <NavLink to="/tipos" tabIndex={4} className="nav-link btn btn-outline-secondary">
               Tipos
             </NavLink>
-            <NavLink to="/peliculas-series" tabIndex={5} className="nav-link">
+            <NavLink to="/peliculas-series" tabIndex={5} className="nav-link btn btn-outline-secondary">
               Peliculas y Series
             </NavLink>
           </div>

@@ -174,6 +174,7 @@ const editarGenero = async () => {
     <>
       <Title title={"Generos"} />
       {loader && <Spinner />}
+      <div className="container">
       <Table generos={generos} borrarGeneroPorId={borrarGeneroPorId} />
       <ButtonModal title="Nuevo Genero" />
       <Modal
@@ -182,6 +183,7 @@ const editarGenero = async () => {
         guardar={guardar}
         clearForm={clearForm}
       />
+      </div>
     </>
   );
 }
