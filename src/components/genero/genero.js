@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
+//
 import {
   borrarGenero,
   crearGenero,
   obtenerGeneros,
   editarGenero,
-
 } from "../../services/GeneroService";
+//
 import Title from "../iu/Title";
 import Modal from "./Modal";
 import Table from "./Table";
 import ButtonModal from "../iu/ButtonModal";
 import Spinner from "../iu/Spinner";
 import Swal from "sweetalert2";
-
+//
 export default function Genero() {
   const [generos, setGeneros] = useState([]);
   const [loader, setLoader] = useState(false);
@@ -42,7 +43,7 @@ export default function Genero() {
       });
     }
   };
-
+  // Guardar genero
   const guardar = async () => {
     setLoader(true);
     try {
@@ -69,7 +70,7 @@ export default function Genero() {
       });
     }
   };
-
+// 
   const handleChange = (e) => {
     console.log(e.target);
     setGenero({
@@ -77,14 +78,14 @@ export default function Genero() {
       [e.target.name]: e.target.value,
     });
   };
-
+// 
   const clearForm = () => {
     setGenero({
       nombre: "",
       descripcion: "",
     });
   };
-
+  // Borrar por genero id
   const borrarGeneroPorId = (e) => {
     const id = e.target.id;
     setLoader(true);
@@ -95,7 +96,6 @@ export default function Genero() {
       },
       buttonsStyling: false,
     });
-
     swalWithBootstrapButtons
       .fire({
         title: "Are you sure?",
@@ -141,9 +141,8 @@ export default function Genero() {
         }
       });
   };
-
-//   actualizar genero
-const editarGenero = async () => {
+  //   actualizar genero
+  const editarGeneroLocal = async () => {
     setLoader(true);
     try {
       const response = await editarGenero(genero);
@@ -167,9 +166,9 @@ const editarGenero = async () => {
         text: "Error al intentar actualizar!",
         footer: "Intenta de nuevo!",
       });
-    }
+    }    
   };
-  
+
   return (
     <>
       <Title title={"Generos"} />

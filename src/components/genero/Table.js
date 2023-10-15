@@ -1,6 +1,10 @@
 import React from "react";
 
-export default function Table({ generos = [], borrarGeneroPorId }) {
+export default function Table({
+  generos = [],
+  borrarGeneroPorId,
+  editarGenero,
+}) {
   const borrarPorId = (e) => {
     e.preventDefault();
     borrarGeneroPorId(e);
@@ -27,7 +31,11 @@ export default function Table({ generos = [], borrarGeneroPorId }) {
               <td>{estado ? "Activo" : "Inactivo"}</td>
               <td>{descripcion}</td>
               <td>
-                <button type="button" class="btn btn-info">
+                <button
+                  type="button"
+                  class="btn btn-info"
+                  onClick={() => editarGenero(genero._id)}
+                >
                   Editar
                 </button>
                 <button
