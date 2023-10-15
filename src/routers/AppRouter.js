@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "../components/iu/NavBar";
 import Home from "../components/iu/Home";
 import Generos from "../components/genero/genero";
+import Footer from "../components/iu/Footer";
 
 export default function AppRouter() {
   return (
@@ -14,6 +15,7 @@ export default function AppRouter() {
           <Route path="/generos" element={<Generos />} />
           {/* Agrega más rutas según tus necesidades */}
         </Routes>
+        <Footer /> 
       </div>
     </Router>
   );
