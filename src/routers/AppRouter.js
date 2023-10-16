@@ -7,9 +7,7 @@ import Footer from "../components/iu/Footer";
 
 export default function AppRouter() {
   const estilo = {
-    position: 'absolute',
-    height: '100%',
-    width: '100%',
+ 
     background: '#18332c',
 
     // Otros estilos aquí

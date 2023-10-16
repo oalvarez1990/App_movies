@@ -2,10 +2,7 @@ import React from "react"
 export default function Footer(){
     const estilo = {
         
-        position: 'absolute',
-        width: '100%',
-        bottom: '0',
-        right: '0',
+        
     };
     return(
         <footer style={estilo} className="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 bg-primary">

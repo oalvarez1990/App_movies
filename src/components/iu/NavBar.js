@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import img from '../../assets/img/iudigital.png'
 
 
 
@@ -8,12 +9,14 @@ export default function NavBar() {
     width: '100%'
 
 };
+const estiloImg = {
+  marginRight: '1rem',
+
+};
   return (
-    <nav className="navbar navbar-expand-lg py-3 bg-primary" >
+    <nav className="navbar navbar-expand-lg py-3 bg-primary fixed-top" >
       <div className="container bg-white py-3 rounded">
-        <a>
-          
-        </a>
+          <img src={img} alt="img" className="col-2 mr-4" style={estiloImg} />
         <Link
           to="/"
           tabIndex={0}
