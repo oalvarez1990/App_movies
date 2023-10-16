@@ -4,6 +4,8 @@ import NavBar from "../components/iu/NavBar";
 import Home from "../components/iu/Home";
 import Generos from "../components/genero/genero";
 import Footer from "../components/iu/Footer";
+import Director from '../components/director/Director'
+
 
 export default function AppRouter() {
   const estilo = {
@@ -20,6 +22,7 @@ export default function AppRouter() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/generos" element={<Generos />} />
+          <Route path="/directores" element={<Director />} />
           {/* Agrega más rutas según tus necesidades */}
         </Routes>
         <Footer /> 
